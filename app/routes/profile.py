@@ -1,4 +1,5 @@
 from fastapi import APIRouter, HTTPException, Request
+import logging
 from app.core.limiter import limiter
 import httpx
 from app.core.config import settings
@@ -7,10 +8,12 @@ import html
 
 
 router = APIRouter()
+logger = logging.getLogger("hng-backend")
 
 @router.get("/me")
 @limiter.limit("10/minute")
 async def get_my_profile(request: Request):
+    logger.info(f"Incoming request: {request.method} {request.url} from {request.client.host if request.client else 'unknown'}")
     try:
         async with httpx.AsyncClient(timeout=5.0) as client:
             response = await client.get("https://catfact.ninja/fact")
@@ -29,4 +32,5 @@ async def get_my_profile(request: Request):
         "timestamp": get_current_utc_time(),
         "fact": cat_fact
     }
+    logger.info(f"Response for /me: {data}")
     return data

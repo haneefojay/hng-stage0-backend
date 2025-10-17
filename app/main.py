@@ -1,3 +1,4 @@
+import logging
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from slowapi.middleware import SlowAPIMiddleware
@@ -7,6 +8,13 @@ from starlette.responses import JSONResponse
 
 from app.routes import profile
 from app.core.limiter import limiter
+
+# Basic logger setup
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s %(levelname)s %(name)s %(message)s"
+)
+logger = logging.getLogger("hng-backend")
 
 app = FastAPI(title="HNG stage 0 Backend task")
 
