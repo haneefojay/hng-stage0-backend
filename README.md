@@ -34,7 +34,7 @@ cd hng-stage0-backend
  **2. Create and activate a virtual environment **
 python -m venv venv
 venv\Scripts\activate    # for Windows
-# or
+or
 source venv/bin/activate # for Mac/Linux
 
 **3. Install dependencies**
@@ -45,7 +45,9 @@ pip install -r requirements.txt
 
 Create a .env file in the project root and add:
 EMAIL=yourname@example.com
+
 FULL_NAME=Your_Full_Name_Here
+
 STACK=Your_Stack_Here
 
 **5. Run the server**
