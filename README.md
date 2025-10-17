@@ -51,6 +51,7 @@ pip install -r requirements.txt
 ## 4. Set environment variables
 
 Create a .env file in the project root and add:
+
 EMAIL=yourname@example.com
 
 FULL_NAME=Your_Full_Name_Here
@@ -59,7 +60,7 @@ STACK=Your_Stack_Here
 
 ---
 
-##5. Run the server
+## 5. Run the server
 uvicorn app.main:app --reload
 
 Visit: http://127.0.0.1:8000/me
@@ -78,27 +79,40 @@ Example Response
 
 ---
 
-##Project Structure
+## Project Structure
 
 hng-stage0-backend/
 │
+
 ├── app/
+
 │   ├── main.py
+
 │   ├── routes/
+
 │   │   └── profile.py
+
 │   ├── core/
+
 │   │   ├── config.py
+
 │   │   └── utils.py
+
 │   └── __init__.py
+
 │
 ├── .env.example
+
 ├── requirements.txt
+
 ├── .gitignore
+
 └── README.md
+
 
 ---
 
-##🪄 Author
+## 🪄 Author
 
 Name: Haneef Ojuatalyo
 Email: haneefojutalayo@gmail.com
