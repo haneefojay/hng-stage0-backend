@@ -30,7 +30,7 @@ The task is to build a simple RESTful API endpoint (`/me`) that returns my profi
 ```bash
 git clone https://github.com/haneefojay/hng-stage0-backend.git
 cd hng-stage0-backend
-
+```
  **2. Create and activate a virtual environment **
 python -m venv venv
 venv\Scripts\activate    # for Windows
