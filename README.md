@@ -31,17 +31,24 @@ The task is to build a simple RESTful API endpoint (`/me`) that returns my profi
 git clone https://github.com/haneefojay/hng-stage0-backend.git
 cd hng-stage0-backend
 ```
- **2. Create and activate a virtual environment **
+---
+
+## 2. Create and activate a virtual environment
+
 python -m venv venv
+
 venv\Scripts\activate    # for Windows
 or
 source venv/bin/activate # for Mac/Linux
 
-**3. Install dependencies**
+---
+
+## 3. Install dependencies
 pip install -r requirements.txt
 
+---
 
-**4. Set environment variables**
+## 4. Set environment variables
 
 Create a .env file in the project root and add:
 EMAIL=yourname@example.com
@@ -50,7 +57,9 @@ FULL_NAME=Your_Full_Name_Here
 
 STACK=Your_Stack_Here
 
-**5. Run the server**
+---
+
+##5. Run the server
 uvicorn app.main:app --reload
 
 Visit: http://127.0.0.1:8000/me
@@ -67,7 +76,9 @@ Example Response
   "fact": "Cats can rotate their ears 180 degrees."
 }
 
-**Project Structure**
+---
+
+##Project Structure
 
 hng-stage0-backend/
 │
@@ -85,8 +96,9 @@ hng-stage0-backend/
 ├── .gitignore
 └── README.md
 
+---
 
-**🪄 Author**
+##🪄 Author
 
 Name: Haneef Ojuatalyo
 Email: haneefojutalayo@gmail.com
