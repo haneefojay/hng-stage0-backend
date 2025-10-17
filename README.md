@@ -51,9 +51,7 @@ pip install -r requirements.txt
 ## 4. Set environment variables
 
 Create a .env file in the project root and add:
-
-EMAIL=youremail@example.com
-
+EMAIL=yourname@example.com
 FULL_NAME=Your_Full_Name_Here
 
 STACK=Your_Stack_Here
